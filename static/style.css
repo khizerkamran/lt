@@ -1,0 +1,76 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  background-color: #0e0e0e;
+  color: #ffffff;
+  font-family: 'Segoe UI', sans-serif;
+  overflow: hidden;
+}
+
+/* Header */
+header {
+  height: 60px;
+  background-color: #121212;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.5);
+  z-index: 10;
+}
+
+header h1 {
+  font-size: 2rem;
+  color: #00cfff;
+  letter-spacing: 1px;
+}
+
+/* Main (Iframe Section) */
+main {
+  height: calc(100% - 100px);
+  width: 100%;
+  position: relative;
+}
+
+main iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+  display: block;
+}
+
+/* Loader Spinner */
+.loader {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border: 6px solid #2c2c2c;
+  border-top: 6px solid #00cfff;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  animation: spin 1s linear infinite;
+  z-index: 99;
+}
+
+@keyframes spin {
+  0% { transform: translate(-50%, -50%) rotate(0deg); }
+  100% { transform: translate(-50%, -50%) rotate(360deg); }
+}
+
+/* Footer */
+footer {
+  height: 40px;
+  background-color: #121212;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.9rem;
+  color: #aaaaaa;
+  box-shadow: 0 -1px 3px rgba(0,0,0,0.3);
+}
